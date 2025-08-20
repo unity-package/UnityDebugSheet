@@ -1,5 +1,14 @@
 <h1 align="center">Unity Debug Sheet</h1>
 
+## How To Install
+
+### Add the line below to `Packages/manifest.json`
+
+for version `1.5.5`
+```json
+"com.harumak.unitydebugsheet" : "https://github.com/unity-package/UnityDebugSheet.git?path=/Assets/UnityDebugSheet#1.5.5",
+```
+
 [![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)](LICENSE.md)
 
 [日本語ドキュメント(Japanese Documents Available)](README_JA.md)
