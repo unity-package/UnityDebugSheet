@@ -24,6 +24,7 @@ namespace UnityDebugSheet.Runtime.Core.Scripts.DefaultImpl.Cells
             
             // Cleanup
             valueField.onValueChanged.RemoveAllListeners();
+            valueField.onEndEdit.RemoveAllListeners();
             slider.onValueChanged.RemoveAllListeners();
 
             // Icon
