@@ -29,6 +29,15 @@ namespace UnityDebugSheet.Runtime.Core.Scripts.DefaultImpl.Cells
 
         protected override void SetModel(EnumPickerCellModel model)
         {
+            if (_isInitialized && 0 < _values.Count)
+            {
+                if (_values[0].GetType() != model.ActiveValue.GetType())
+                {
+                    _options.Clear();
+                    _values.Clear();
+                    _isInitialized = false;
+                }
+            }
             if (!_isInitialized)
             {
                 var enumType = model.ActiveValue.GetType();
