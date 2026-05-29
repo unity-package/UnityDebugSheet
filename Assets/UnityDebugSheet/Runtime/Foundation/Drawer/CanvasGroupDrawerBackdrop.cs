@@ -6,11 +6,14 @@ namespace UnityDebugSheet.Runtime.Foundation.Drawer
     public sealed class CanvasGroupDrawerBackdrop : DrawerBackdrop
     {
         private CanvasGroup _canvasGroup;
+        private void Awake()
+        {
+            _canvasGroup = GetComponent<CanvasGroup>();
+        }
         
         protected override void OnStart()
         {
             base.OnStart();
-            _canvasGroup = GetComponent<CanvasGroup>();
         }
         
         protected override void SetProgressInternal(float visibility)
